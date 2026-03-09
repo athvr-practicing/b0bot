@@ -1,6 +1,9 @@
 {
-    "mistralai": "mistralai/Mistral-7B-Instruct-v0.2",
-    "gemma": "google/gemma-2b",
-    "llama" : "meta-llama/Meta-Llama-3-8B-Instruct"
-
+    "mistralai":    { "provider": "huggingface", "model_id": "mistralai/Mistral-7B-Instruct-v0.2" },
+    "gemma":        { "provider": "huggingface", "model_id": "google/gemma-2b" },
+    "llama":        { "provider": "huggingface", "model_id": "meta-llama/Meta-Llama-3-8B-Instruct" },
+    "llama3":       { "provider": "groq",        "model_id": "llama3-8b-8192" },
+    "mixtral":      { "provider": "groq",        "model_id": "mixtral-8x7b-32768" },
+    "gemini-pro":   { "provider": "gemini",      "model_id": "gemini-1.5-pro" },
+    "gemini-flash": { "provider": "gemini",      "model_id": "gemini-1.5-flash" }
 }

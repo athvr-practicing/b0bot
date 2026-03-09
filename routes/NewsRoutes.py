@@ -1,5 +1,6 @@
 from flask import *
 from controllers.NewsController import NewsController
+from config.llm_router import get_available_providers
 routes = Blueprint("routes", __name__)
 news_controller = NewsController("mistralai") # default model name
 
@@ -9,6 +10,14 @@ home page route
 @routes.route("/", methods=["GET"])
 def home_route():
     return render_template("home.html")
+
+
+"""
+return available LLM providers based on configured API keys
+"""
+@routes.route("/providers", methods=["GET"])
+def providers_route():
+    return jsonify({"available_providers": get_available_providers()})
 
 
 """
